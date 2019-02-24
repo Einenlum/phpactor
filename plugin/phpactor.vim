@@ -251,6 +251,7 @@ function! phpactor#ClassNew()
 endfunction
 
 function! phpactor#ClassInflect()
+    let currentPath = expand('%')
     call phpactor#rpc("class_inflect", { "current_path": currentPath })
 endfunction
 
